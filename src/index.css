@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+    --font-sans: 'DM Sans', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    --brand-primary: #2563EB;
+    --brand-dark: #172554;
+    --brand-bg: #F8FAFC;
+    --brand-accent: #F59E0B;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--brand-bg);
+    color: var(--brand-dark);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.page-tech-canvas {
+  background-color: #f8fafc;
+  background-image:
+    radial-gradient(circle at 10% 24%, rgba(37, 99, 235, 0.085) 0%, transparent 42%),
+    radial-gradient(circle at 90% 42%, rgba(245, 158, 11, 0.055) 0%, transparent 36%),
+    radial-gradient(circle at 50% 88%, rgba(23, 37, 84, 0.055) 0%, transparent 48%),
+    linear-gradient(to right, rgba(37, 99, 235, 0.032) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.032) 1px, transparent 1px),
+    linear-gradient(180deg, #eff6ff 0%, #f8fafc 38%, #f1f5f9 100%);
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    36px 36px,
+    36px 36px,
+    100% 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only-sheet {
+    display: block !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  table {
+    page-break-inside: auto;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+}

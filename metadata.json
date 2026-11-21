@@ -1,0 +1,6 @@
+{
+  "name": "ApexQuote Pro — Bilingual Excel Quotation Portal",
+  "description": "Responsive bilingual (CN/EN) online quotation portal that parses Excel price lists, builds custom quotes, and exports A4 PDF quotations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

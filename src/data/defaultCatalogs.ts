@@ -1,0 +1,87 @@
+import { CatalogDataset, CompanyProfile } from '../types/quote';
+
+export const DEFAULT_COMPANY_PROFILE: CompanyProfile = {
+  brandShortName: '华强精品汇',
+  nameZh: '深圳市华强电子世界（精品汇）',
+  nameEn: 'Shenzhen Huaqiang Electronic world Jingpinhui Co., Ltd.',
+  contactPersonZh: '唐小姐',
+  contactPersonEn: 'Ms. Tang',
+  taglineZh: 'LED 智能像素屏背包、穿戴装备与车载屏源头供应链',
+  taglineEn: 'Smart LED Pixel Backpacks, Wearable Gear & Car Display Supply',
+  addressZh: '深圳市福田区华强北电子世界深圳二店三楼 H3C103（精品汇）',
+  addressEn: 'H3C103 (Jingpinhui), Huaqiangbei Electronic World, Futian District, Shenzhen (3rd Floor, Shenzhen Second Store)',
+  phone: '13554784313',
+  email: 'sales@jingpinhui-tech.com',
+  wechat: '13554784313',
+  whatsapp: '+86 13554784313',
+  website: '',
+  taxId: '',
+  bankInfoZh: '支持对公转账、微信/支付宝或现结自提，详细开票与账户信息请联系唐小姐确认。',
+  bankInfoEn: 'T/T Bank Transfer, Alipay, WeChat Pay accepted. Contact Ms. Tang for formal proforma invoice & banking details.',
+  defaultTermsZh:
+    '1. 本报价单含 10PCS 以下国内零售价与批量出厂单价（出厂默认无纺布包装，如需独立纸箱通常加 ¥3.5~¥4/个）。\n2. 常规现货 48 小时内发货，OEM LOGO 贴牌与定制彩盒/牛皮纸箱交期请联系唐小姐确认。\n3. 本报价有效期 15 天，最终运费及税票要求以双方确认订单为准。',
+  defaultTermsEn:
+    '1. EXW Unit Price applies to standard bulk orders (non-woven pack by default; optional individual carton +$0.5/pc).\n2. Retail rate applies to orders under 10 PCS.\n3. Quotation valid for 15 days. Contact Ms. Tang for OEM logo, custom carton & international freight.',
+};
+
+export const DEFAULT_ZH_CATALOG: CatalogDataset = {
+  lang: 'zh',
+  fileName: 'LED儿童智能背包产品核心报价表-20261119.xlsx',
+  importedAt: '2026-11-20',
+  currency: 'CNY',
+  sheetNames: ['LED智能背包产品核心报价'],
+  isSample: true,
+  items: [
+    {
+      id: 'zh-t2-1',
+      sku: 'T2-1',
+      name: 'T2-1',
+      material: '牛津、尼龙、皮膜',
+      spec: '屏幕点数：64*64 · 屏幕点间距：P3.75 · 供电方式：移动电源供电 · 通讯方式：蓝牙/4G · 净重：1.1KG · 毛重：1.5KG · 容量：16L · 产品尺寸：43*30*13cm · 盒子尺寸：42*30.5*14.5cm',
+      color: '黑',
+      individualBox: '纸箱尺寸：63*47*44cm 数量：6 个 10.1KG/箱',
+      bulkBox: '纸箱尺寸：63*47*48cm 数量：12 个 13.9KG/箱',
+      category: 'LED智能背包产品核心报价',
+      unit: '个',
+      unitPrice: 175,
+      retailPrice: 298,
+      retailThreshold: 10,
+      boxSurcharge: 4,
+      packagingNote: '纺布包装 无独立纸箱 需要独立纸箱+4 元',
+      certifications: 'CNAS CE-ROHS CE-RED TELEC',
+      moq: 1,
+      leadTime: '现货 / 大货面议',
+    },
+  ],
+};
+
+export const DEFAULT_EN_CATALOG: CatalogDataset = {
+  lang: 'en',
+  fileName: 'LOY product quotation（best)-20261119新+3e.xlsx',
+  importedAt: '2026-11-20',
+  currency: 'USD',
+  sheetNames: ['Quotation sheet for Wearable Electronics and Smart Equipment Series Products'],
+  isSample: true,
+  items: [
+    {
+      id: 'en-h1-1',
+      sku: 'H1-1',
+      name: 'H1-1',
+      material: 'fabric +TPU',
+      spec: 'pixel：16*32 · Leds spacing：P4 · power supply：polymer battery-600Mah · connect：Bluetooth · N.W.：0.12KG · G.W.：0.3KG · Product size：12*20*27cm · Carton size：12*19*15cm',
+      color: 'Black',
+      individualBox: 'Carton size：63*47*44cm QTY：30PCS 11.5KG/CTN',
+      bulkBox: 'Carton size：54*46*35cm QTY：100PCS 14.1KG/CTN',
+      category: 'Quotation sheet for Wearable Electronics and Smart Equipment Series Products',
+      unit: 'pcs',
+      unitPrice: 11.4,
+      retailPrice: 20.7,
+      retailThreshold: 10,
+      boxSurcharge: 0.5,
+      packagingNote: 'Non-woven pack, no carton. + $0.5for carton.',
+      certifications: 'CNAS CE-ROHS CE-RED FCC-ID',
+      moq: 1,
+      leadTime: 'In Stock / Bulk Negotiable',
+    },
+  ],
+};
